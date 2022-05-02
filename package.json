@@ -1,0 +1,56 @@
+{
+  "name": "vezgo-trial",
+  "version": "1.0.0",
+  "description": "Standard ES6 Boilerplate configured with babel, webpack and eslint.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/index.js --wallet 0xDA9dfA130Df4dE4673b89022EE50ff26f6EA73Cf",
+    "watch": "babel src --watch -d dist",
+    "build": "babel src -d dist",
+    "lint": "sh node_modules/.bin/esw webpack.config.* src --color",
+    "lint:watch": "npm run lint -- --watch",
+    "clear": "rm -rf dist/",
+    "clear:all": "rm -rf node_modules/ && npm run clear",
+    "prebuild": "npm run clear",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vezgo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AzizBardi/test-trial.git"
+  },
+  "author": "Aziz Bardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AzizBardi/test-trial/issues"
+  },
+  "homepage": "https://github.com/AzizBardi/test-trial#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "chalk-rainbow": "^1.0.0",
+    "color-json": "^2.0.1",
+    "commander": "^9.2.0",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.6.4",
+    "express": "^4.18.1",
+    "express-list-routes": "^1.1.3",
+    "open": "^8.4.0",
+    "ora": "^6.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/runtime": "^7.17.9",
+    "babel-loader": "^8.2.5",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^8.14.0",
+    "eslint-watch": "^8.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

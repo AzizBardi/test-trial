@@ -1,0 +1,1 @@
+exports.isRequired = (name) => { throw new Error(`${name} is required`); };
